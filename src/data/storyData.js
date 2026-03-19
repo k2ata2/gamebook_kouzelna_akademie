@@ -4,7 +4,7 @@ export const storyData = {
     id: 'start',
     title: '1. Slunečné nádvoří',
     text: 'Stojíš na nádvoří Kouzelnické akademie. Normálně by tu byl veselý ruch, ale dnes jsou všichni smutní. Vzácná Hvězdná sova Jiskřička přes noc zmizela ze své klece ve věži! Bez ní bude akademie brzy úplně potmě.\n\nMáš v kapse 5 zlaťáků z kapesného. Rozhodneš se, že ji zachráníš. Než ale vyrazíš přes bránu do Temného hvozdu, měl by ses pořádně připravit.',
-    imageType: 'town',
+    imageSrc: '/images/nadvori.jpg', // TAKHLE VYPADÁ OBRÁZEK PRO SCÉNU
     choices: [
       { text: 'Jít prozkoumat prázdnou klec', target: 'cage', reqOpen: 'cage_searched' },
       { text: 'Promluvit si se spolužákem Kubou', target: 'classmate', reqOpen: 'kuba_helped' },
@@ -18,7 +18,7 @@ export const storyData = {
     id: 'cage',
     title: '2. Prázdná klec',
     text: 'Dojdeš ke zlaté kleci. Dvířka jsou vypáčená. Když se podíváš blíž, všimneš si, že na mříži visí smradlavý, zelený chomáč chlupů. \n\n"To je jasné," bleskne ti hlavou. "To je srst skřeta Chňapky!" Teď už víš jistě, že musíš do jeho doupěte v Temném hvozdu.',
-    imageType: 'alley',
+    imageType: 'alley', // TOHLE MUSÍŠ NAHRADIT KDYŽ TAM CHCEŠ OBRÁZEK
     choices: [{ text: 'Schovat Skřetí chlup a jít zpět', target: 'start', loot: 'Skřetí chlup', closeLoc: 'cage_searched' }],
   },
 
@@ -26,7 +26,7 @@ export const storyData = {
     id: 'classmate',
     title: '3. Zoufalý Kuba',
     text: 'Kuba sedí na lavičce, drží se za hlavu a vypadá, že každou chvíli vyletí z kůže. \n\n"Ahoj! Potřebuju pomoct," fňuká. "Pančelka po nás chce seřadit všech 10 slovních druhů, tak jak jdou za sebou. Úplně se mi to pomíchalo a nevím, jak dál! Pomůžeš mi je poskládat správně?"',
-    imageType: 'riddle',
+    imageSrc: '/images/Kuba.jpg',
     inputType: 'sort',
     options: ['Podstatná jména', 'Přídavná jména', 'Zájmena', 'Číslovky', 'Slovesa', 'Příslovce', 'Předložky', 'Spojky', 'Částice', 'Citoslovce'],
     correctAnswers: ['Podstatná jména', 'Přídavná jména', 'Zájmena', 'Číslovky', 'Slovesa', 'Příslovce', 'Předložky', 'Spojky', 'Částice', 'Citoslovce'],
@@ -54,7 +54,7 @@ export const storyData = {
     id: 'spells_class',
     title: '4. Třída Kouzelných formulí',
     text: 'Pan učitel Moudroslav si tě přísně měří přes brýle. "Chystáš se do lesa, že? Jako student prvního ročníku udržíš v hlavě jen jedno kouzlo. Dobře si rozmysli, které se naučíš. Můžeš si vybrat jen jedno!"',
-    imageType: 'treasure',
+    imageSrc: '/images/trida.jpg',
     choices: [
       { text: 'Naučit se: Kouzlo Světlušky (Posvítí ve tmě)', target: 'start', loot: 'Kouzlo Světlušky', closeLoc: 'spell_learned' },
       { text: 'Naučit se: Skákavá žabka (Přeskočí překážku)', target: 'start', loot: 'Skákavá žabka', closeLoc: 'spell_learned' },
@@ -67,7 +67,7 @@ export const storyData = {
     id: 'shop',
     title: '5. Krámek paní Čarobejlí',
     text: 'Všude to voní po bylinkách a starém papíru. Paní Čarobejlí se na tebe usměje: "Jdeš hledat Jiskřičku? Mám tu věci, co ti v lese zachrání krk. Ale zadarmo to nebude!"',
-    imageType: 'shop',
+    imageSrc: '/images/obchod.jpg',
     choices: [
       { text: 'Koupit Lektvar bublin (Na obranu)', target: 'shop', cost: 3, loot: 'Lektvar bublin' },
       { text: 'Koupit Lektvar zdraví', target: 'shop', cost: 2, loot: 'Lektvar zdraví' },
@@ -110,7 +110,7 @@ export const storyData = {
     id: 'forest_gate',
     title: '6. Brána do Temného hvozdu',
     text: 'Stojíš před obrovskou tepanou bránou. Za ní už začíná hustý les, kde žijí skřeti, trollové a kdovíco ještě. Cesta zpátky do bezpečí školy už nebude možná. Máš všechno, co potřebuješ?',
-    imageType: 'gate',
+    imageSrc: '/images/brana.jpg',
     choices: [
       { text: 'Vstoupit do hvozdu', target: 'ch2_start' },
       { text: 'Ještě se vrátit na nádvoří', target: 'start' },
@@ -122,7 +122,7 @@ export const storyData = {
     id: 'ch2_start',
     title: '7. Rozcestí v Temném hvozdu',
     text: 'Brána za tebou zapadla. Temný hvozd je plný obrovských stromů a podivných zvuků. Dojdeš na rozcestí, kde se cesta dělí na tři různé směry. \n\nVlevo je stezka, na kterou padá obrovská tma. Uprostřed je zarostlý vstup do hustého keřového bludiště. A vpravo slyšíš zurčet divoký potok. Kudy se vydáš?',
-    imageType: 'mountains',
+    imageSrc: '/images/rozcesti.jpg',
     choices: [
       { text: 'Jít vlevo na Temnou stezku', target: 'path_dark' },
       { text: 'Vstoupit do Keřového bludiště', target: 'path_maze_enter' },
@@ -135,7 +135,7 @@ export const storyData = {
     id: 'path_dark',
     title: '8. Temná stezka',
     text: 'Vstoupíš na stezku, ale koruny stromů jsou tu tak husté, že je tu tma jako v pytli. Slyšíš, jak to kolem tebe šustí a houká.',
-    imageType: 'alley',
+    imageSrc: '/images/temno.jpg',
     choices: [
       { text: 'Rozsvítit Kouzelnou baterku', target: 'path_dark_bugs', req: 'Kouzelná baterka' },
       { text: 'Zakouzlit: Kouzlo Světlušky', target: 'path_dark_bugs', req: 'Kouzlo Světlušky' },
@@ -155,7 +155,7 @@ export const storyData = {
     id: 'path_dark_bugs',
     title: '9. Mračno much',
     text: 'Konečně je trochu lépe vidět, ale cestu ti zničehonic zablokuje obří mračno otravných, bzučících a kousavých pralesních much! Tyhle potvory jen tak neodejdou.',
-    imageType: 'bug',
+    imageSrc: '/images/mouchy.jpg',
     choices: [
       { text: 'Zakouzlit: Odpuzovač', target: 'path_dark_hut' },
       { text: 'Hodit Lektvar bublin a uvěznit je', target: 'path_dark_hut', req: 'Lektvar bublin', removeItem: 'Lektvar bublin' },
@@ -175,7 +175,7 @@ export const storyData = {
     id: 'path_dark_hut',
     title: '10. Opuštěná chýše',
     text: 'Setřeseš ze sebe poslední mouchy a dorazíš k polorozpadlé chýši. Před ní rostou modře světélkující houby. Na dveřích visí cedule: "Ber, co potřebuješ, ale nezdržuj se."',
-    imageType: 'house',
+    imageSrc: '/images/chyse.jpg',
     choices: [
       { text: 'Utrhnout Zářivou houbu', target: 'ch3_entrance', loot: 'Zářivá houba' },
       { text: 'Nechat houby být a rychle odejít', target: 'ch3_entrance' },
@@ -187,7 +187,7 @@ export const storyData = {
     id: 'path_maze_enter',
     title: '8. Vstup do bludiště',
     text: 'Křoví je tu vysoké a cesty se neustále kroutí. Brzy zjistíš, že jsi úplně ztracený. Cesta se dělí na dvě – z jedné voní sladké fialky, z druhé je cítit mokrá psí srst.',
-    imageType: 'trees',
+    imageSrc: '/images/smrad.jpg',
     choices: [
       { text: 'Jít za vůní fialek', target: 'path_maze_flowers', damage: 1 },
       { text: 'Jít tam, kde to smrdí', target: 'path_maze_troll' },
@@ -206,7 +206,7 @@ export const storyData = {
     id: 'path_maze_troll',
     title: '9. Kamenný trol',
     text: 'Narazíš na mýtinu. Cestu blokuje obrovský Kamenný trol a zahřmí: \n\n"Pustím tě ven, jen když mi pomůžeš. Měl jsem v košíku 45 kouzelných šišek, ale 12 mi jich sežrala obří veverka. Kolik šišek mi zbylo?"',
-    imageType: 'help',
+    imageSrc: '/images/trol.jpg',
     inputType: 'number',
     correctAnswers: ['33'],
     successTarget: 'path_maze_win',
@@ -234,7 +234,7 @@ export const storyData = {
     id: 'path_maze_statue',
     title: '10. Plačící socha',
     text: 'Trol tě pustil dál. Dojdeš na malý palouček, kde stojí kamenná socha víly, které z očí tečou opravdové slzy. "Jsem tu tak sama a nikdo si se mnou nepovídá," fňuká socha.',
-    imageType: 'statue',
+    imageSrc: '/images/víla.jpg',
     choices: [
       { text: 'Utěšit sochu milým slovem', target: 'path_maze_statue_kind' },
       { text: 'Ignorovat ji a odejít z bludiště', target: 'ch3_entrance' },
@@ -254,7 +254,7 @@ export const storyData = {
     id: 'path_river',
     title: '8. Zpívající potok',
     text: 'Dojdeš k divokému potoku. Voda zpívá veselé, ale hodně hlasité písničky. Proud je silný a voda ledová. Most tu žádný není, ale přes potok visí silná větev.',
-    imageType: 'waterfall',
+    imageSrc: '/images/potok.jpg',
     choices: [
       { text: 'Zakouzlit: Skákavá žabka', target: 'path_river_jump', req: 'Skákavá žabka' },
       { text: 'Přehoupnout se na Lasu z pavučiny', target: 'path_river_lasso', req: 'Laso z pavučiny' },
@@ -290,7 +290,7 @@ export const storyData = {
     id: 'path_river_mud',
     title: '9. Zrádné bahno',
     text: 'Po překonání potoka se ocitneš v bažinaté části lesa. Cesta je plná hlubokých kaluží bublajícího, zapáchajícího bahna.',
-    imageType: 'footprints',
+    imageSrc: '/images/bahno.jpg',
     choices: [
       { text: 'Skákat opatrně po suchých kamenech', target: 'path_river_mud_jump' },
       { text: 'Projít to rovnou středem bláta', target: 'path_river_mud_stuck', damage: 1 },
@@ -317,7 +317,7 @@ export const storyData = {
     id: 'path_river_fairy',
     title: '10. Hladová víla',
     text: 'Cestu ti zatarasí malá, rozzlobená víla. "Tudy nesmíš! Tohle je můj les a já mám strašný hlad. Nedám ti pokoj, dokud mi nedáš něco k snědku!"',
-    imageType: 'ghost',
+    imageSrc: '/images/víla_nastvana.jpg',
     choices: [
       { text: 'Dát víle Svačinu', target: 'path_river_fairy_feed', req: 'Svačina', removeItem: 'Svačina' },
       { text: 'Zkusit ji odehnat Odpuzovačem', target: 'path_river_fairy_spell', req: 'Odpuzovač' },
@@ -354,7 +354,7 @@ export const storyData = {
     id: 'ch3_entrance',
     title: '11. Zlověstná jeskyně',
     text: 'Všechny cesty Temného hvozdu se spojily. Stojíš před obrovskou, ponurou jeskyní. Zevnitř je cítit pach skřetích ponožek a slyšíš slabé zahoukání... Jiskřička! Jsi na správném místě.\n\nVchod ale chrání kouzelná vrata opatřená číselníkem.',
-    imageType: 'gate',
+    imageSrc: '/images/vrata na kod.jpg',
     choices: [{ text: 'Zkusit vrata otevřít', target: 'ch3_start' }],
   },
 
@@ -363,7 +363,7 @@ export const storyData = {
     id: 'ch3_start',
     title: '12. Zámek skřeta Chňapky',
     text: 'Na těžkých vratech je obrovský kamenný ciferník, který je celý posetý čísly. Nad ním je křivým písmem vyryto:\n\n„Kdo chce vejít dál, musí vědět víc než král. Zadej správný výsledek: 3 x 4 = ?“\n\nPokud se spleteš, zámek tě prý pěkně kousne!',
-    imageType: 'riddle',
+    imageSrc: '/images/kod.jpg',
     inputType: 'number',
     correctAnswers: ['12'],
     successTarget: 'ch3_door_open',
@@ -392,7 +392,7 @@ export const storyData = {
     id: 'ch4_boss_intro',
     title: '14. Skřetí doupě',
     text: 'Uvnitř je nepořádek a strašný smrad. Uprostřed místnosti je zlatá klec, ve které se krčí malá, úplně pohaslá sovička Jiskřička. Je tak smutná, že vůbec nesvítí.\n\nKolem klece poskakuje zlý skřet Chňapka. "No tak sviť, ty opeřenej lampionku! Nebo z tebe nadělám polštáře!" vzteká se.\n\nPak se otočí a všimne si tě. "A jéje, vetřelec! Tebe si dám k večeři!" zařve a skočí po tobě. Souboj začíná!',
-    imageType: 'boss',
+    imageSrc: '/images/skret.jpg',
     choices: [{ text: 'Připravit se k boji!', target: 'combat_start' }],
   },
 
@@ -471,7 +471,7 @@ export const storyData = {
     id: 'combat_boss_turn',
     title: 'Útok Skřeta',
     text: '',
-    imageType: 'combat',
+    imageSrc: '/images/utok.jpg',
     combat: { bossAttack: true },
     choices: [{ text: 'Jsi na řadě!', target: 'combat_start' }],
   },
@@ -481,7 +481,7 @@ export const storyData = {
     id: 'boss_defeated',
     title: '15. Skřet se vzdává',
     text: 'Chňapka si sedne na zadek a začne nahlas brečet. "Já už nechci hrát! Ty podvádíš! Já chtěl jenom sovu, co by mi svítila, abych se tu nebál tmy. A ona jen pípá a nesvítí. A teď mě tu ještě bijou!"',
-    imageType: 'help',
+    imageSrc: '/images/brek.jpg',
     choices: [
       { text: 'Nechat mu Zářivou houbu, ať se nebojí', target: 'end_good', req: 'Zářivá houba', removeItem: 'Zářivá houba' },
       { text: 'Nechat mu baterku', target: 'end_good', req: 'Kouzelná baterka', removeItem: 'Kouzelná baterka' },
@@ -493,7 +493,7 @@ export const storyData = {
     id: 'end_good',
     title: 'KONEC - Skutečný hrdina',
     text: 'Podáš brečícímu skřetovi světlo. Chňapka přestane plakat, nevěřícně si dárek vezme a popotáhne. "T-to je pro mě? Tak já si ji teda nechám..."\n\nKdyž otevřeš klec a Jiskřička vidí, že jsi na zloděje byl vlastně hodný, celá se rozzáří teplým, měkkým světlem. Vznese se ti na rameno. \n\nCesta zpátky do Akademie je díky ní prosluněná a veselá. Stal ses nejen hrdinou, ale dokázal jsi, že laskavost je to největší kouzlo ze všech.',
-    imageType: 'victory',
+    imageSrc: '/images/vítězství.jpg',
     choices: [{ text: 'Hrát znovu', target: 'reset' }],
   },
 
@@ -501,7 +501,7 @@ export const storyData = {
     id: 'end_neutral',
     title: 'KONEC - Zachránce',
     text: 'Zatímco skřet fňuká na zemi, ty rychle otevřeš klec a Jiskřička ti vděčně skočí do náruče. Rychle spolu utečete z temné jeskyně ven. \n\nSkřeta jsi nechal samotného ve tmě, ale akademie bude mít zpět své světlo. Spolužáci i učitelé tě nadšeně přivítali jako zachránce!',
-    imageType: 'victory',
+    imageSrc: '/images/spatny_konec.jpg',
     choices: [{ text: 'Hrát znovu', target: 'reset' }],
   },
 

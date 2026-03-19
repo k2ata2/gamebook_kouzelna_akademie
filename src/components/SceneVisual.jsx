@@ -16,7 +16,15 @@ import {
   Waves,
 } from 'lucide-react';
 
-export default function SceneVisual({ type, bossHp, showBossHp }) {
+export default function SceneVisual({ type, bossHp, showBossHp, imageSrc, imageAlt }) {
+  if (imageSrc) {
+    return (
+      <div className="w-full h-full overflow-hidden bg-black">
+        <img src={imageSrc} alt={imageAlt || ''} className="w-full h-full object-cover" />
+      </div>
+    );
+  }
+
   const iconProps = { strokeWidth: 1.5, className: 'text-[#2c1810] opacity-80' };
   let content;
   let title;

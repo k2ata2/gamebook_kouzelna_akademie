@@ -252,7 +252,13 @@ export default function App() {
 
         <div className="flex-1 flex overflow-hidden">
           <div className="w-1/3 border-r-4 border-double border-[#2c1810] relative shadow-[5px_0_15px_rgba(0,0,0,0.1)] z-10 hidden md:block group">
-            <SceneVisual type={currentScene.imageType} bossHp={bossHp} showBossHp={bossSceneIds.includes(currentSceneId)} />
+            <SceneVisual
+              type={currentScene.imageType}
+              bossHp={bossHp}
+              showBossHp={bossSceneIds.includes(currentSceneId)}
+              imageSrc={currentScene.imageSrc}
+              imageAlt={currentScene.imageAlt || currentScene.title}
+            />
           </div>
 
           <div className="w-full md:w-2/3 flex flex-col relative bg-[#f4e4bc]">
