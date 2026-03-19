@@ -1,0 +1,40 @@
+{
+  "name": "gamebook_kouzelna_akademie",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k2ata2/gamebook_kouzelna_akademie.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/k2ata2/gamebook_kouzelna_akademie/issues"
+  },
+  "homepage": "https://github.com/k2ata2/gamebook_kouzelna_akademie#readme",
+  "dependencies": {
+    "lucide-react": "^0.577.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.2.2",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@vitejs/plugin-react": "^6.0.1",
+    "jsdom": "^29.0.0",
+    "tailwindcss": "^4.2.2",
+    "vite": "^8.0.0",
+    "vitest": "^4.1.0"
+  }
+}
+
